@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+
+<head>
+	    
+	    <link rel='stylesheet' href='style.css'/>
+		<link rel="stylesheet" type="text/css" href="Fonts/fonts.css"/>
+		<script src="JS/Vendor/phaser.js"></script>
+		<script src="JS/boot.js"></script>
+		<script src="JS/HighScore.js"></script>
+		<script src="JS/load.js"></script>
+		<script src="JS/title.js"></script>
+		<script src="JS/level1.js"></script>
+		<script src="JS/Victory.js"></script>
+		<title>Game</title>
+		<ul id='menu'>
+			<li><a href="main.html">Home</a></li>
+			<li><a href="#">Game Controls</a>
+		<ul class='hidden'>
+		
+			<li><a href="instructions.html">Controls</a></li>
+		</ul>
+			</li>
+
+			<li><a href="game.html">Play Game</a></li>
+			
+	</ul>
+		<header>
+			<h1> Tom the Limit Breaker</h1>
+		</header>
+
+	
+</head>
+
+<body>
+	<script type="text/javascript">
+		window.onload=function(){
+
+		var game = new Phaser.Game(960 ,640, Phaser.AUTO,'');
+
+	game.state.add('boot',Game.BootState);
+	game.state.add('preload',Game.PreloadState);
+	game.state.add('title',Game.TitleState);
+	game.state.add('HighScore',Game.HighScoreState);
+	game.state.add('level1',Game.LeveloneState);
+	game.state.add('Victory',Game.VictoryState);
+
+	game.state.start('boot');
+
+
+
+		}
+		</script>	
+
+</body>
+
+</html>
